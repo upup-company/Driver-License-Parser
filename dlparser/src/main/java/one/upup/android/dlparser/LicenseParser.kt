@@ -116,7 +116,7 @@ public class LicenseParser(
     }
 
     private fun parseVersion(): String? {
-        return Regex.firstMatch("\\d{6}(\\d{2})\\w+", dataInput)
+        return Regex.version(dataInput)
     }
 
 }

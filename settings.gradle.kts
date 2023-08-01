@@ -13,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Driver_License_Parser"
-include(":shared")
+rootProject.name = "DriverLicenseParser"
 include(":dlparser")

@@ -20,4 +20,15 @@ object Regex {
         return null
     }
 
+    fun version(data: String): String? {
+        try {
+            val regex = Regex("\\d{6}(\\d{2})\\w+", RegexOption.IGNORE_CASE)
+            val matches = regex.findAll(data).toList()
+            if (matches.isEmpty()) return null
+            val firstMatch = matches.first()
+            return firstMatch.groups[1]?.value
+        } catch (_: Exception) {
+            return null
+        }
+    }
 }
